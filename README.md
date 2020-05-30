@@ -1,10 +1,6 @@
-Live example is [here](https://codesandbox.io/s/github/yunusemredilber/material-ui-starter).
-Thanks to [Material-UI](https://github.com/mui-org/material-ui) for great, fully responsive and handsome UI.
-This template comes with ready to use [Redux](https://github.com/reduxjs/redux), [React Router](https://github.com/ReactTraining/react-router), [local-storage](https://github.com/bevacqua/local-storage) and more!
-
 To run on localhost:
 ```
-cd material-ui-starter
+cd aimm
 npm install
 npm start
  ```

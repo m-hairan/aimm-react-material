@@ -5,22 +5,23 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 // Material UI Imports
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {CssBaseline} from "@material-ui/core";
 
 // Component Imports
-import AppBar from "./components/AppBar";
+import AppHeader from "./components/common/Header";
+import AppFooter from "./components/common/Footer";
 
 // Page Imports
-import HomePage from "./components/pages/HomePage";
+import HomePage from "./components/pages/Home";
 import NoPageFound from "./components/pages/NoPageFound";
-import TestPage from "./components/pages/TestPage";
-import SettingsPage from "./components/pages/SettingsPage";
+import SystemPage from "./components/pages/System";
+import AboutPage from "./components/pages/About";
 
 // Action Imports
 import {setSettings} from "./actions/settings-actions";
 
 // Local Storage Operations
 import {getLocalSettings,setLocalSettings} from "./services/settingsOperations";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -42,15 +43,17 @@ class App extends Component {
 
     return (
         <MuiThemeProvider theme={theme}>
-          <CssBaseline/>
           <Router>
-            <AppBar/>
+            <AppHeader/>
+            <main>
               <Switch>
-                <Route path={"/"} exact /*strict*/ component={HomePage}/>
-                <Route path={"/test"} exact /*strict*/ component={TestPage}/>
-                <Route path={"/settings"} exact /*strict*/ component={SettingsPage}/>
-                <Route exact /*strict*/ component={NoPageFound}/>
+                <Route path={"/"} exact component={HomePage}/>
+                <Route path={"/system"} exact  component={SystemPage}/>
+                <Route path={"/about"} exact  component={AboutPage}/>
+                <Route exact component={NoPageFound}/>
               </Switch>
+            </main>
+            <AppFooter/>
           </Router>
         </MuiThemeProvider>
     );

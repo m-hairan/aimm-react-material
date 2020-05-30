@@ -30,6 +30,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+* {
+  font-family: 'Aktiv Grotesk', sans-serif !important;
+}
 body {
   line-height: 1;
   background-color: #fafafa;
@@ -57,13 +60,20 @@ body {
 
 p, h1, h2, h3, h4, h5, h6 {
   /*color: #BDBDBD;*/
-  font-family: 'Mali', cursive;
+  font-family: 'Aktiv Grotesk', sans-serif;
+  color: #2F2F4F;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+}
 
 .App {
   text-align: center;
+}
+
+main {
+  margin-top: 100px;
 }
 
 .activePage{
@@ -72,4 +82,38 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .unactivePage{
   text-decoration: none;
+}
+
+.text-blue {
+  color: #3561A3;
+}
+
+button {
+  min-height: 40px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+button:hover {
+  box-shadow: 8px 8px 10px #00000029 !important;
+}
+
+button.aimm-primary {
+  background-color: #3561A3 !important;
+  color: white;
+}
+
+button.aimm-primary:hover {
+  background-color: #386EBF !important;
+}
+
+button.aimm-outlinedPrimary {
+  border: 1px solid #3561A3 !important;
+  color: #3561A3;
 }
